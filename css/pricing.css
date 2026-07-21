@@ -1,174 +1,128 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>ripjordy editing</title>
-    <link rel="stylesheet" href="../css/topbar.css"/>
-    <link rel="stylesheet" href="../css/index.css"/>
-    <link rel="stylesheet" href="../css/pricing.css"/>
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
-  </head>
-  <body>
-    <header class="topbar">
-      <a class="brand" href="../index.html">RIPJORDY</a>
-      <nav>
-        <a href="../index.html">home</a>
-        <a href="about.html">about</a>
-        <a href="pricing.html" style="color: rgb(218, 195, 255); font-weight: 700;">pricing</a>
-        <a href="contact.html">contact</a>
-      </nav>
-    </header>
+.pricing-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+  margin-top: 1.55rem;
+  margin-bottom: 1.5rem;
+}
 
-    <main class="page">
-      <section class="hero">
-        <h1>pricing</h1>
-        <p><strong>want to hire me?</strong> let's break down how exactly i handle prices with my clients.</p>
-        <p>are you a <button type="button" class="priceref toggle-btn" data-target="freelance-options" style="background-color: #5a70eb; border: 2px solid #4a5ab4;">solo creator</button>
-          or a <button type="button" class="priceref toggle-btn" data-target="brand-options" style="background-color: rgb(125, 73, 223); border: 2px solid rgb(97, 61, 165);">brand / team</button> ?</p>
-      </section>
+.pricing-options h3 {
+    font-weight: 800;
+    display: inline-block;
+}
 
-<!-- https://www.fiverr.com/mkb014/edit-amazing-and-fun-gaming-videos-for-your-youtube-channel -->
-      <section class="freelance-options" id="freelance-options">
-        <section>
-          <div class="card" id="barlink" style="border: 4px solid #d4d4d4; margin-top: 1.5rem;">
-            <h3 style="margin-bottom: 0.01rem;">my gig page (for more info)</h3>
-            <a href="https://www.fiverr.com/mkb014/edit-amazing-and-fun-gaming-videos-for-your-youtube-channel" style="
-            background-color:black;
-            border-radius: 6px;
-            text-align: center;
-            margin: auto 0 auto 0;
-            align-content: center;
-            width: auto;
-            height: auto;
-            padding: 8px 12px;
-            font-weight: bold;
-            text-decoration: none;
-            color: rgb(255, 255, 255);
-            background-color: #19a463;
-            ">Fiverr</a>
-          </div>
-        </section>
-        <div class="pricing-options">
-          <div class="card" style="border: 4px solid #d4d4d4;">
-            <h3>Essential</h3>
-            <p id="price-value">$20</p>
-            <div style="line-height: 0.3rem; margin-bottom: 1.2rem;">
-              <p><strong>Duration: </strong>3+ days</p>
-              <p><strong>Revisions: </strong>1</p>
-            </div>
-            <hr style="border: none; border-top: 1px solid rgb(41, 41, 41);">
-            <p style="margin-top: 0.75rem;"><img class="checklist" src="../assets/check.png" style="transform: translate(0, -0.1rem);"> <strong>Basic cutting & pacing</strong></p>
-            <p style="margin-top: 0.15rem;"><img class="checklist" src="../assets/check.png" style="transform: translate(0, -0.1rem);"> <strong>Sound design & mixing</strong></p>
-            <p style="margin-top: 0.15rem;"><img class="checklist" src="../assets/check.png" style="transform: translate(0, -0.1rem);"> <strong>Subtitles</strong></p>
-            <p style="margin-top: 0.15rem;"><img class="checklist" src="../assets/x.png" style="transform: translate(0, -0.1rem);"> <i>Color grading</i></p>
-            <p style="margin-top: 0.15rem;"><img class="checklist" src="../assets/x.png" style="transform: translate(0, -0.1rem);"> <i>Motion graphics</i></p>
-          </div>
-          <div class="card" style="background-color:rgb(255, 250, 202); border: 4px solid #e2e2ba;">
-            <h3>Excellent</h3>
-            <p id="price-value">$35</p>
-            <div style="line-height: 0.3rem; margin-bottom: 1.2rem;">
-              <p><strong>Duration: </strong>4+ days</p>
-              <p><strong>Revisions: </strong>2</p>
-            </div>
-            <hr style="border: none; border-top: 1px solid rgb(41, 41, 41);">
-            <p style="margin-top: 0.75rem;"><img class="checklist" src="../assets/check.png" style="transform: translate(0, -0.1rem);"> <strong>Longer video w/ transitions</strong></p>
-            <p style="margin-top: 0.15rem;"><img class="checklist" src="../assets/check.png" style="transform: translate(0, -0.1rem);"> <strong>Sound design & mixing</strong></p>
-            <p style="margin-top: 0.15rem;"><img class="checklist" src="../assets/check.png" style="transform: translate(0, -0.1rem);"> <strong>Subtitles</strong></p>
-            <p style="margin-top: 0.15rem;"><img class="checklist" src="../assets/check.png" style="transform: translate(0, -0.1rem);"> <strong>Color grading</strong></p>
-            <p style="margin-top: 0.15rem;"><img class="checklist" src="../assets/x.png" style="transform: translate(0, -0.1rem);"> <i>Motion graphics</i></p>
-          </div>
-          <div class="card" style="background-color:rgb(186, 255, 255); border: 4px solid #a6dfdf;">
-            <h3>Pro</h3>
-            <p id="price-value">$50</p>
-            <div style="line-height: 0.3rem; margin-bottom: 1.2rem;">
-              <p><strong>Duration: </strong>6+ days</p>
-              <p><strong>Revisions: </strong>2</p>
-            </div>
-            <hr style="border: none; border-top: 1px solid rgb(41, 41, 41);">
-            <p style="margin-top: 0.75rem;"><img class="checklist" src="../assets/check.png" style="transform: translate(0, -0.1rem);"> <strong>3D Fusion Assets</strong></p>
-            <p style="margin-top: 0.15rem;"><img class="checklist" src="../assets/check.png" style="transform: translate(0, -0.1rem);"> <strong>Sound design & mixing</strong></p>
-            <p style="margin-top: 0.15rem;"><img class="checklist" src="../assets/check.png" style="transform: translate(0, -0.1rem);"> <strong>Subtitles</strong></p>
-            <p style="margin-top: 0.15rem;"><img class="checklist" src="../assets/check.png" style="transform: translate(0, -0.1rem);"> <strong>Color grading</strong></p>
-            <p style="margin-top: 0.15rem;"><img class="checklist" src="../assets/check.png" style="transform: translate(0, -0.1rem);"> <strong>Motion graphics</strong></p>
-            <p style="margin-top: 0.15rem;"><img class="checklist" src="../assets/plus.png" style="transform: translate(0, -0.1rem);"> <strong>Custom stinger / intro</strong></p>
-          </div>
-        </div>
-        <p style="text-align: center;"><i>* excluding service fees</i></p>
-        <section class="hero" style="text-align: left;">
-          <h1 style="margin-top: -0.6rem; font-size: 1.5rem;"><strong>why do i recommended fiverr to solo creators?</strong></h1>
-          <p style="font-size: 1rem;">for one-time or non-scheduled orders, fiverr is preferred because each project is automatically added to my portfolio (plus, every order gets me closer to "Top Rated" status).</p>
-          <p style="font-size: 1rem;">large-scale creators ("brands") generally pay more because video editing is a very time-consuming task, depending on the content. my fiverr prices are extremely competitive since i get to set the rules, 
-            but in a professional environment, delivery times are often much shorter, with the client's style usually being strict and not up to interpretation.</p>
-          <p style="font-size: 1rem;">if i'm going to be part of your brand, i expect to share some revenue from it as well.</p>
-          <h1 style="margin-top: 3rem; font-size: 1.5rem;"><strong>do you take recurring orders?</strong></h1>
-          <p style="font-size: 1rem;">yes! in fact, i offer two types of subscription deals on my page: 3 and 6 months, with <strong>10% and 15% off all subsequent orders</strong> respectively.</p>
-          <h1 style="margin-top: 3rem; font-size: 1.5rem;"><strong>can you design thumbnails for fiverr clients?</strong></h1>
-          <p style="font-size: 1rem;">absolutely! thumbnails are priced at $10 on my page.</p>
-        </section>
-      </section>
+img.checklist {
+  height: 1em;
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
 
-      <section class="brand-options" id="brand-options">
-        <h2 style="margin: 1.5rem 0 -1rem 0;">for those looking to hire</h2>
-        <div class="pricing-options" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
-          <div class="card" style="background-color:rgb(236, 217, 243); border: 4px solid #e6c9e1;">
-            <h3>Trial</h3>
-            <div style="line-height: 0.3rem; margin-bottom: 1.2rem;">
-              <p><strong>Duration: </strong>1-2 days</p>
-              <p><strong>Revisions: </strong>0</p>
-            </div>
-            <hr style="border: none; border-top: 1px solid rgb(41, 41, 41);">
-            <p style="margin-top: 0.75rem;">If you're still unsure about whether you want to hire me, reach out and I will edit one minute or less of any kind of content you'd like.</p>
-            <a class="cardlink" href="contact.html"><strong>Contact Me</strong></a>
-          </div>
-          <div class="card" style="background-color:rgb(255, 255, 255); border: 4px solid #d4d4d4;">
-            <h3>Long-Form</h3>
-            <div style="line-height: 0.3rem; margin-bottom: 1.2rem;">
-              <p><strong>Duration: </strong>4+ days</p>
-              <p><strong>Revisions: </strong>N/A</p>
-            </div>
-            <hr style="border: none; border-top: 1px solid rgb(41, 41, 41);">
-            <h3 style="font-size: 1.1rem;">Preferences</h3>
-            <p style="margin-top: 0.45rem;"><strong>Price: </strong>$110+ / delivery</p>
-            <p style="margin-top: 0.15rem;"><strong>Rate: </strong>Project-based</p>
-            <p style="margin-top: 0.15rem;">All features included</p>
-          </div>
-        </div>
-      </section>
+#price-value {
+    float: right;
+    margin-top: -10px;
+    margin-right: -10px;
+    transform: rotate(7deg);
+    font-size: 1.2rem;
+    font-weight: 900;
+    aspect-ratio: 1 / 1;
+    width: 23%;
+    border: 4px solid rgb(104, 192, 86);
+    border-radius: 50%;
+    background-color: rgb(75, 218, 75);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    </main>
-    <footer>
-        © 2026 ripjordy / made by a human
-    </footer>
+.freelance-options,
+.brand-options {
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+}
 
-    <script>
-      const toggleButtons = Array.from(document.querySelectorAll('.toggle-btn'));
-      const optionSections = Array.from(document.querySelectorAll('.freelance-options, .brand-options'));
+.page > .freelance-options,
+.page > .brand-options {
+  opacity: 0;
+  animation: none;
+}
 
-      toggleButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-          const targetSection = document.getElementById(button.getAttribute('data-target'));
-          const isAlreadyVisible = targetSection && targetSection.classList.contains('is-visible');
+.page > .freelance-options.is-visible,
+.page > .brand-options.is-visible {
+  display: block;
+  animation: fadeInUp 0.7s ease forwards;
+}
 
-          if (!targetSection || isAlreadyVisible) {
-            return;
-          }
+.page > .freelance-options.is-hiding,
+.page > .brand-options.is-hiding {
+  display: block;
+  animation: fadeOutDown 0.7s ease forwards;
+}
 
-          const currentlyVisible = optionSections.find((section) => section.classList.contains('is-visible'));
+.priceref,
+button.priceref {
+  text-decoration: none;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  margin: auto 0 auto 0;
+  align-content: center;
+  width: auto;
+  height: auto;
+  padding: 1px 7px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  transition: transform 0.2s ease;
+  transform-origin: center;
+  display: inline-block;
+  font: inherit;
+  cursor: pointer;
+}
 
-          if (currentlyVisible) {
-            currentlyVisible.classList.remove('is-visible');
-            currentlyVisible.classList.add('is-hiding');
+a.cardlink {
+  text-decoration: none;
+  border: 3px solid rgb(212, 170, 205);
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 0.8rem;
+  align-content: center;
+  vertical-align: middle;
+  width: 93.25%;
+  height: auto;
+  padding: 8px 9px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(228, 182, 219);
+  color: rgb(255, 246, 255);
+  font: inherit;
+  cursor: pointer;
+  display: inline-block;
+}
 
-            window.setTimeout(() => {
-              currentlyVisible.classList.remove('is-hiding');
-              targetSection.classList.add('is-visible');
-            }, 350);
-          } else {
-            targetSection.classList.add('is-visible');
-          }
-        });
-      });
-    </script>
-  </body>
-</html>
+.priceref:hover,
+button.priceref:hover,
+.priceref:focus-visible,
+button.priceref:focus-visible {
+    transform: scale(1.02);
+    outline: none;
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.page > .freelance-options.is-hiding,
+.page > .brand-options.is-hiding {
+  display: block;
+  animation: fadeOutUp 0.35s ease forwards;
+}
