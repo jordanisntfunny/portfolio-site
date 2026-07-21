@@ -1,185 +1,170 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ripjordy editing</title>
-    <link rel="stylesheet" href="css/topbar.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-  </head>
-  <body>
-    <header class="topbar">
-      <a class="brand" href="index.html">RIPJORDY</a>
-      <nav>
-        <a href="index.html" style="color: rgb(218, 195, 255); font-weight: 700;">home</a>
-        <a href="html/about.html">about</a>
-        <a href="html/pricing.html">pricing</a>
-        <a href="html/contact.html">contact</a>
-      </nav>
-    </header>
+* {
+    &::-webkit-scrollbar-thumb {
+    border: 0px solid rgba(255, 255, 255, 0);
+}
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+        background-color: transparent;
+    }
+}
 
-    <main class="page">
-      <section class="hero">
-        <h1>hey there!</h1>
-        <p>i'm jordan, a professional video editor and graphic designer of six years with over <strong id="playlist-view-count">5,000,000 views</strong> to my name.</p>
-      </section>
+.page {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
 
-      <section>
-        <h2 style="
-        margin: 1.5rem 0 0rem 0;
-        ">check out my most viewed works</h2>
-        <h3 style="
-        font-size: 0.8rem;
-        margin: 0.01rem 0 0.5rem 0;
-        ">click these!</h3>
-        <div class="video-row">
-          <a class="video-card" href="https://www.youtube.com/watch?v=fcpk_w2yKt0" target="_blank" rel="noopener">
-            <img class="video-thumb" src="https://i.ytimg.com/vi/fcpk_w2yKt0/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLChNmuyX_ozKlzwtZDw32vIuSO-IA" alt="Video preview" />
-            <strong>BeamNG but with a CHAOS MOD</strong>
-            <p>by Jaden Williams</p>
-          </a>
-          <a class="video-card" href="https://www.youtube.com/watch?v=LU1-zGvniDA" target="_blank" rel="noopener">
-            <img class="video-thumb" src="https://i.ytimg.com/vi/LU1-zGvniDA/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAxW7Uek-ELqS7S6nKig_F5anvEkw" alt="Video preview" />
-            <strong>BeamNG but your dad burns in a wreck</strong>
-            <p>by Jaden Williams</p>
-          </a>
-          <a class="video-card" href="https://www.youtube.com/watch?v=0stDaYk5QTE" target="_blank" rel="noopener">
-            <img class="video-thumb" src="https://i.ytimg.com/vi/0stDaYk5QTE/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBuNkEnGfj2aJUgql9C2xKvpsUFTg" alt="Video preview" />
-            <strong>BeamNG but your dad's yelling at you the whole ride</strong>
-            <p>by Jaden Williams</p>
-          </a>
-        </div>
-      </section>
+.page > * {
+  opacity: 0;
+  animation: fadeInUp 0.7s ease forwards;
+}
 
-      <section>
-        <div class="card" id="barlink">
-          <h3 style="margin-bottom: 0.01rem;">public videos by clients (playlist)</h3>
-          <a href="https://www.youtube.com/playlist?list=PLESeGRSOOh3PzU3jbKEq43YNasFirfveD" style="
-          background-color:black;
-          border-radius: 6px;
-          text-align: center;
-          align-content: center;
-          width: auto;
-          height: auto;
-          padding: 8px 12px;
-          font-weight: bold;
-          text-decoration: none;
-          color: rgb(255, 255, 255);
-          background-color: rgb(255, 28, 28);
-          ">YouTube</a>
-        </div>
-      </section>
+.page > *:nth-child(2) { animation-delay: 0.1s; }
+.page > *:nth-child(3) { animation-delay: 0.2s; }
+.page > *:nth-child(4) { animation-delay: 0.3s; }
+.page > *:nth-child(5) { animation-delay: 0.4s; }
+.page > *:nth-child(6) { animation-delay: 0.5s; }
 
-      <section style="margin-top: 1.5rem;">
-        <div class="card" id="barlink">
-          <h3 style="margin-bottom: 0.01rem;">i love music, follow me on spotify!</h3>
-          <a href="https://open.spotify.com/user/c2p1hgjg45274indgm188g3u0?si=a30969710f074cae" style="
-          background-color:black;
-          border-radius: 6px;
-          text-align: center;
-          align-content: center;
-          width: auto;
-          height: auto;
-          padding: 8px 12px;
-          font-weight: bold;
-          text-decoration: none;
-          color: rgb(255, 255, 255);
-          background-color: rgb(30, 215, 96);
-          ">Spotify</a>
-        </div>
-      </section>
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-      <section class="info-grid">
-        <div class="card">
-          <h3>what i do</h3>
-          <p>In terms of work, I find joy in helping others achieve their content creation goals! While I mainly focus on gaming content, I also have great experience in <strong>motion graphics</strong>, <strong>music videos</strong>, and <strong>explainers</strong> (video essays).</p>
-        </div>
-        <div class="card">
-          <h3>how i work</h3>
-          <p>All of my editing is done entirely within <strong>DaVinci Resolve Studio</strong> by Blackmagic Design, and my graphic design is done in <strong>Adobe Photoshop</strong> and <strong>Illustrator</strong>. My workflow is extremely flexible, and I can even use Premiere project files if needed.</p>
-        </div>
-      </section>
-    </main>
-    <footer>
-        © 2026 ripjordy / made by a human
-    </footer>
+.hero {
+  text-align: center;
+  padding: 1.5rem;
+}
 
-    <script>
-      const playlistId = "PLESeGRSOOh3PzU3jbKEq43YNasFirfveD";
-      const apiKey = "AIzaSyAXNJqw7QbH2NJ9cuRAy-zKoxAv4_MBCgU";
-      const viewCountElement = document.getElementById("playlist-view-count");
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  line-height: 0.6;
+  color: #2f2b41;
+}
 
-      function formatNumber(value) {
-        return new Intl.NumberFormat("en-US").format(value);
-      }
+.hero p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #5b6474;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
 
-      async function loadPlaylistViews() {
-        if (!viewCountElement) return;
+iframe {
+  width: 100%;
+  height: 54%;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
 
-        if (!apiKey || apiKey === "YOUR_YOUTUBE_DATA_API_KEY") {
-          viewCountElement.textContent = "0,000,000 views";
-          return;
-        }
+.video-row {
+  display: flex;
+  flex-grow: 1;
+  gap: 1rem;
+  overflow-x: auto;
+  overflow: hidden;
+  padding: 0.25rem 0 0.75rem;
+}
 
-        try {
-          let nextPageToken = "";
-          let totalViews = 0;
-          const seenVideoIds = new Set();
+.video-card {
+  min-width: 215px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 4px solid #d4d4d4;
+  border-radius: 12px;
+  padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform-origin: center;
+}
 
-          do {
-            const playlistUrl = new URL("https://www.googleapis.com/youtube/v3/playlistItems");
-            playlistUrl.searchParams.set("part", "snippet");
-            playlistUrl.searchParams.set("maxResults", "50");
-            playlistUrl.searchParams.set("playlistId", playlistId);
-            playlistUrl.searchParams.set("key", apiKey);
+.video-card p {
+  margin: 0.5rem 0 0;
+  color: #52607a;
+  font-size: 0.9rem;
+}
 
-            if (nextPageToken) {
-              playlistUrl.searchParams.set("pageToken", nextPageToken);
-            }
+.video-thumb {
+  display: block;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(135deg, #dfeaff 0%, #f3dfff 100%);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #52607a;
+  border-radius: 8px;
+  font-weight: 600;
+}
 
-            const playlistResponse = await fetch(playlistUrl);
-            if (!playlistResponse.ok) {
-              throw new Error(`Playlist request failed: ${playlistResponse.status}`);
-            }
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+  margin-top: 1.55rem;
+  margin-bottom: 1.5rem;
+}
 
-            const playlistData = await playlistResponse.json();
-            const videoIds = (playlistData.items || [])
-              .map((item) => item?.snippet?.resourceId?.videoId)
-              .filter((id) => id && !seenVideoIds.has(id));
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 4px solid #d4d4d4;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  line-height: 1.2;
+  height: fit-content;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform-origin: center;
+}
 
-            if (videoIds.length === 0) {
-              break;
-            }
+.video-card:hover, .card:hover {
+  transform: scale(1.01);
+}
 
-            videoIds.forEach((id) => seenVideoIds.add(id));
+.card h3 {
+  margin-top: 0.1rem;;
+  margin-bottom: -0.3rem;
+}
 
-            const videosUrl = new URL("https://www.googleapis.com/youtube/v3/videos");
-            videosUrl.searchParams.set("part", "statistics");
-            videosUrl.searchParams.set("id", videoIds.join(","));
-            videosUrl.searchParams.set("key", apiKey);
+.card p {
+  margin-bottom: 0rem;
+}
 
-            const videosResponse = await fetch(videosUrl);
-            if (!videosResponse.ok) {
-              throw new Error(`Video stats request failed: ${videosResponse.status}`);
-            }
+@media (max-width: 600px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
-            const videosData = await videosResponse.json();
-            for (const video of videosData.items || []) {
-              totalViews += Number(video?.statistics?.viewCount || 0);
-            }
+#barlink {
+  margin-top: 0.2rem;
+  margin-bottom: -0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
 
-            nextPageToken = playlistData.nextPageToken || "";
-          } while (nextPageToken);
-
-          viewCountElement.textContent = `${formatNumber(totalViews)} views`;
-        } catch (error) {
-          console.error("Could not load playlist views:", error);
-          viewCountElement.textContent = "5,000,000 views";
-        }
-      }
-
-      loadPlaylistViews();
-    </script>
-  </body>
-</html>
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1d1b25;
+  color: #fff;
+  margin-top: 2rem;
+}
