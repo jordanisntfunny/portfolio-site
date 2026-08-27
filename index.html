@@ -110,6 +110,8 @@
       const apiKey = "AIzaSyAXNJqw7QbH2NJ9cuRAy-zKoxAv4_MBCgU";
       const viewCountElement = document.getElementById("playlist-view-count");
 
+      const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+      
       function formatNumber(value) {
         return new Intl.NumberFormat("en-US").format(value);
       }
@@ -179,7 +181,10 @@
         }
       }
 
-      loadPlaylistViews();
+      do {
+        loadPlaylistViews();
+        await delay(10000);
+      } while (true);
     </script>
   </body>
 </html>
