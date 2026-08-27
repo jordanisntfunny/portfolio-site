@@ -111,6 +111,9 @@
       const viewCountElement = document.getElementById("playlist-view-count");
 
       const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+      let totalViews = 0;
+      let lastCount = 0;
       
       function formatNumber(value) {
         return new Intl.NumberFormat("en-US").format(value);
@@ -120,13 +123,12 @@
         if (!viewCountElement) return;
 
         if (!apiKey || apiKey === "YOUR_YOUTUBE_DATA_API_KEY") {
-          viewCountElement.textContent = "0,000,000 views";
+          viewCountElement.textContent = "5,000,000 views";
           return;
         }
 
         try {
           let nextPageToken = "";
-          let totalViews = 0;
           const seenVideoIds = new Set();
 
           do {
@@ -174,13 +176,16 @@
             nextPageToken = playlistData.nextPageToken || "";
           } while (nextPageToken);
 
-          viewCountElement.textContent = `${formatNumber(totalViews)} views`;
+          if (totalViews > lastCount) {
+            viewCountElement.textContent = `${formatNumber(totalViews)} views`;
+          }
+          lastCount = totalViews;
         } catch (error) {
           console.error("Could not load playlist views:", error);
           viewCountElement.textContent = "5,000,000 views";
         }
       }
-
+      
       async function update() {
         while (true) {
           loadPlaylistViews();
