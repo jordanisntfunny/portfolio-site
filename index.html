@@ -181,10 +181,15 @@
         }
       }
 
-      do {
-        loadPlaylistViews();
-        await delay(10000);
-      } while (true);
+      async function update() {
+        while (true) {
+          loadPlaylistViews();
+          await delay(10000);
+        }
+      }
+
+      update();
+      
     </script>
   </body>
 </html>
